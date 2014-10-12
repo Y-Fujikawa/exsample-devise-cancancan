@@ -42,8 +42,13 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 
+# Seed Management
+gem 'seed-fu', '~> 2.3'
+
+# User development, test
 group :development, :test do
   gem 'spring'
+  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end

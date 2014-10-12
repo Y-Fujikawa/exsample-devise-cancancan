@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923144713) do
+ActiveRecord::Schema.define(version: 20141012030155) do
+
+  create_table "time_cards", force: true do |t|
+    t.integer  "user_id"
+    t.date     "business_day"
+    t.string   "starting_time", limit: 4
+    t.string   "closing_time",  limit: 4
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
